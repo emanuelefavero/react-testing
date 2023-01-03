@@ -188,6 +188,20 @@ test('renders todo component', () => {
 - `userEvent.unhover(element)` - simulates unhovering over the given element
 - `userEvent.upload(element, fileOrFiles)` - simulates uploading the given file or files on the given element
 
+#### userEvent example
+
+```js
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+
+test('userEvent example', () => {
+  render(<input data-testid='input' />)
+  const input = screen.getByTestId('input')
+  userEvent.type(input, 'hello')
+  expect(input.value).toBe('hello')
+})
+```
+
 > Note: You can also use `fireEvent` to simulate events.
 > `user-event` provides more realistic browser interactions than `fireEvent`
 
