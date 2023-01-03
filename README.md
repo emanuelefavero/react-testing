@@ -246,3 +246,10 @@ afterEach(() => {
   cleanup()
 })
 ```
+
+## Resources
+
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Jest](https://jestjs.io/)
+- [user-event](https://testing-library.com/docs/ecosystem-user-event/)
+- [React Testing Cheat Sheet](https://testing-library.com/docs/dom-testing-library/cheatsheet/)
