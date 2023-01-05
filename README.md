@@ -266,9 +266,21 @@ afterEach(() => {
 })
 ```
 
+## Priority
+
+- `getByRole` - gets the element by its role
+- `getByLabelText` - gets the element by its label text (useful for forms)
+- `getByPlaceholderText` - gets the element by its placeholder text (also useful for forms)
+- `getByText` - gets the element by its text (useful outside of forms)
+- `getByDisplayValue` - gets the element by its display value (useful for form inputs that have values)
+- `getByAltText` - gets the element by its alt text (useful for images, areas, and inputs)
+- `getByTitle` - gets the element by its title
+- `getByTestId` - gets the element by its test id (only recommended when other queries don't work)
+
 ## Resources
 
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Jest](https://jestjs.io/)
 - [user-event](https://testing-library.com/docs/ecosystem-user-event/)
 - [React Testing Cheat Sheet](https://testing-library.com/docs/dom-testing-library/cheatsheet/)
+- [React Testing Library Priority](https://testing-library.com/docs/queries/about/#priority)
