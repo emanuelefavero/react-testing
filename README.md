@@ -57,6 +57,12 @@ In integration testing, we write tests taking into account how a user would use 
 >
 > Note: The two are not mutually exclusive, you generally want to use both in your application
 
+## End to end testing
+
+End to end testing is testing the entire application. It follows the user flow and tests the application from the user's perspective as it moves through the application.
+
+- A good end to end testing tool is [Cypress](https://www.cypress.io/)
+
 #### Libraries used
 
 - `@testing-library/jest-dom`
@@ -337,3 +343,4 @@ afterEach(() => {
 - [user-event](https://testing-library.com/docs/ecosystem-user-event/)
 - [React Testing Cheat Sheet](https://testing-library.com/docs/dom-testing-library/cheatsheet/)
 - [React Testing Library Priority](https://testing-library.com/docs/queries/about/#priority)
+- [Cypress](https://www.cypress.io/)
