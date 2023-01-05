@@ -4,6 +4,12 @@ This is a cheat sheet repo for how to test React components using Jest and React
 
 > Note: [Create React App](https://create-react-app.dev/) comes with Jest and React testing library pre-installed
 
+## Reasons for testing
+
+- **Confidence** - you can be confident that your code is working as expected
+- **Refactoring** - you can refactor your code without breaking it
+- **Regression** - you can prevent bugs from being introduced when you make changes to your code
+
 ## Assertion
 
 - _"Testing is about translating user interactions in code and making the right assertions"_
@@ -17,6 +23,27 @@ AAA is a pattern for organizing unit tests. It breaks tests down into three clea
 - **Arrange** - setup the test (render the component, assign variables, etc.)
 - **Act** - perform the action (click a button, type in an input, etc.)
 - **Assert** - check the result (check if the button is disabled, check if the input has the correct value, etc.)
+
+## Have a test priority
+
+- **Important Features** - test the most important features first
+- **Edge Cases** - e.g. empty input, invalid input, etc.
+- **Things That Break Easily** - e.g. error handling, etc.
+- **User Interactions** - e.g. clicking a button, typing in an input, etc.
+- **Conditional Rendering** - e.g. rendering a component if a condition is true, etc.
+- **API Calls** - e.g. fetching data from an API, etc.
+
+## Test Driven Development (TDD)
+
+- **TDD** is a development process where you write tests before writing the code
+- **TDD** is a way to write code that is easy to test
+- **TDD** is a way to write code that is easy to refactor
+
+## Types of tests
+
+- **Unit tests** - test individual functions
+- **Integration tests** - test multiple functions
+- **End-to-end tests** - test the entire app
 
 #### Libraries used
 
