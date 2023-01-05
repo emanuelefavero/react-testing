@@ -18,6 +18,24 @@ To run the tests, run the following command
 npm test
 ```
 
+### Running a specific test file
+
+```bash
+npm test src/components/__tests__/Component.test.js
+```
+
+> OR `npm test` and then `p` to filter by a filename regex pattern
+
+#### Running a specific test
+
+```bash
+npm test -- -t 'test name'
+```
+
+> `'test-name'` is the name of the test. (e.g. `describe('test-name), () => { ... }`)
+>
+> > OR `npm test` and then `t` to filter by a test name regex pattern
+
 ## Testing React components
 
 To test components, you can put both the components and tests in the `components` folder or create a `__tests__` folder just for the tests

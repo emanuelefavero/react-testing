@@ -5,6 +5,7 @@ import Debug from './components/Debug'
 import UserEventType from './components/UserEventType'
 import Count from './components/Count'
 import Mocking from './components/Mocking'
+import MockMyChild from './components/MockMyChild'
 
 function App() {
   const todos = [
@@ -24,6 +25,7 @@ function App() {
       <UserEventType />
       <Count />
       <Mocking name={name} setName={setName} />
+      <MockMyChild />
     </>
   )
 }
