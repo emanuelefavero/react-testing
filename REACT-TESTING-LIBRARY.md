@@ -275,4 +275,4 @@ afterEach(() => {
 - `getByDisplayValue` - gets the element by its display value (useful for form inputs that have values)
 - `getByAltText` - gets the element by its alt text (useful for images, areas, and inputs)
 - `getByTitle` - gets the element by its title
-- `getByTestId` - gets the element by its test id (only recommended when other queries don't work)
+- `getByTestId` - gets the element by its test id (with `data-testid`, only recommended when other queries don't work)
