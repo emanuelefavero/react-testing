@@ -1,8 +1,22 @@
 # React Testing
 
-This is a cheat sheet repo for how to test React components using Jest and React testing library
+This is a cheat sheet repo for how to test React components using Jest and React testing library.
 
 > Note: [Create React App](https://create-react-app.dev/) comes with Jest and React testing library pre-installed
+
+## Assertion
+
+- _"Testing is about translating user interactions in code and making the right assertions"_
+
+An assertion is a statement that is either true or false. In testing, we use assertions to check if the code is working as expected.
+
+## AAA (Arrange, Act, Assert)
+
+AAA is a pattern for organizing unit tests. It breaks tests down into three clear and distinct steps:
+
+- **Arrange** - setup the test (render the component, assign variables, etc.)
+- **Act** - perform the action (click a button, type in an input, etc.)
+- **Assert** - check the result (check if the button is disabled, check if the input has the correct value, etc.)
 
 #### Libraries used
 
@@ -276,14 +290,6 @@ afterEach(() => {
 - `getByAltText` - gets the element by its alt text (useful for images, areas, and inputs)
 - `getByTitle` - gets the element by its title
 - `getByTestId` - gets the element by its test id (only recommended when other queries don't work)
-
-## AAA (Arrange, Act, Assert)
-
-AAA is a pattern for organizing unit tests. It breaks tests down into three clear and distinct steps:
-
-- **Arrange** - setup the test (render the component, assign variables, etc.)
-- **Act** - perform the action (click a button, type in an input, etc.)
-- **Assert** - check the result (check if the button is disabled, check if the input has the correct value, etc.)
 
 ## Resources
 
