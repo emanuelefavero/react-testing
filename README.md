@@ -180,22 +180,6 @@ test('renders todo component', () => {
 
 > Note: You can also use `not` to reverse the assertion (e.g. `expect(element).not.toBeInTheDocument()`)
 
-### Async Await
-
-Sometimes you need to wait for an element or a state to change before you can make an assertion.
-For example a button that is enabled on page load for a split second but then disabled immediately after. In this case you should use `async` await in your test.
-
-- await for a button to be disabled
-
-```js
-test('button is disabled', async () => {
-  render(<Todo />
-  expect(await screen.findByRole('button')).toBeDisabled()
-})
-```
-
-> Note: We used `.findByRole('button')` instead of `.getByRole('button')` because `.findByRole('button')` is async
-
 ## Testing events
 
 - `userEvent.click(element)` - simulates a click event on the given element
@@ -256,6 +240,21 @@ test('waits for element to be removed', async () => {
 - `waitForElement` - waits for the given element to be added to the DOM
 
 - `waitForDomChange` - waits for the DOM to change
+
+### Fix load weird behavior with async await
+
+Sometimes something weird can happen on page load, such as a button that is enabled on page load for a split second but then disabled immediately after. In this case you should use `async` await in your test.
+
+- await for a button to be disabled
+
+```js
+test('button is disabled', async () => {
+  render(<Todo />
+  expect(await screen.findByRole('button')).toBeDisabled()
+})
+```
+
+> Note: We used `.findByRole('button')` instead of `.getByRole('button')` because `.findByRole('button')` is async
 
 ## Cleanup
 
