@@ -276,3 +276,21 @@ afterEach(() => {
 - `getByAltText` - gets the element by its alt text (useful for images, areas, and inputs)
 - `getByTitle` - gets the element by its title
 - `getByTestId` - gets the element by its test id (with `data-testid`, only recommended when other queries don't work)
+
+## Mocking
+
+- `jest.fn()` - creates a mock function
+- `jest.mock()` - can be used to mock the implementation of a function
+
+```js
+jest.mock('axios', () => ({
+  get: jest.fn(() => Promise.resolve({ data: 'hello' })),
+}))
+```
+
+## Mock Children
+
+We can use `jest.fn()` and `jest.mock()` to mock react children (open both links side by side to see how it works)
+
+- [Test Example](https://github.com/TheOdinProject/theodinproject/blob/main/app/javascript/components/project-submissions/components/__tests__/submissions-list.test.jsx)
+- [Component Example](https://github.com/TheOdinProject/theodinproject/blob/main/app/javascript/components/project-submissions/components/submissions-list.jsx)

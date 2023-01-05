@@ -61,6 +61,38 @@ End to end testing is testing the entire application. It follows the user flow a
 
 - A good end to end testing tool is [Cypress](https://www.cypress.io/)
 
+## Mocking
+
+**Mocking** is when you replace a function with a fake function. It is useful when you want to test a function in isolation without worrying about the implementation of other functions.
+
+Example:
+
+```js
+// mock function
+const mockFetch = jest.fn(() => Promise.resolve({ data: {} }))
+
+// mock implementation
+jest.mock('axios', () => ({
+  get: mockFetch,
+}))
+
+// test
+test('fetches data', async () => {
+  await fetchUsers()
+  expect(mockFetch).toHaveBeenCalledTimes(1)
+})
+```
+
+- jest.fn() - creates a mock function
+- jest.mock() - can be used to mock the implementation of a function
+
+> Open the following links side by side to see how mocking is used in a real application
+>
+> - [Test Example](https://github.com/TheOdinProject/theodinproject/blob/main/app/javascript/components/project-submissions/components/__tests__/submissions-list.test.jsx)
+> - [Component Example](https://github.com/TheOdinProject/theodinproject/blob/main/app/javascript/components/project-submissions/components/submissions-list.jsx)
+>
+> Learn more about mocking in this [Odin Project lesson](https://www.theodinproject.com/lessons/node-path-javascript-react-testing-part-2)
+
 ## Resources
 
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
@@ -69,3 +101,5 @@ End to end testing is testing the entire application. It follows the user flow a
 - [React Testing Cheat Sheet](https://testing-library.com/docs/dom-testing-library/cheatsheet/)
 - [React Testing Library Priority](https://testing-library.com/docs/queries/about/#priority)
 - [Cypress](https://www.cypress.io/)
+- [Mocking Tutorial](https://github.com/TheOdinProject/theodinproject/blob/main/app/javascript/components/project-submissions/components/__tests__/submissions-list.test.jsx)
+- [Mocking in the real world](https://github.com/TheOdinProject/theodinproject/blob/main/app/javascript/components/project-submissions/components/submissions-list.jsx)
