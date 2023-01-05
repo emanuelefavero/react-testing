@@ -306,6 +306,24 @@ jest.mock('axios', () => ({
 }))
 ```
 
+### Mock a function
+
+- mocking a function and expecting it to be called
+
+```js
+const mockFunction = jest.fn()
+expect(mockFunction).toHaveBeenCalledTimes(1)
+```
+
+### Mock a child
+
+- mocking a child and expecting it to be in the document
+
+```js
+jest.mock('child', () => () => <div data-testid='child'>Child</div>)
+expect(screen.getByTestId('child')).toBeInTheDocument()
+```
+
 ## Mock Children
 
 We can use `jest.fn()` and `jest.mock()` to mock react children (open both links side by side to see how it works)
