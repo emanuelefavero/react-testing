@@ -45,6 +45,18 @@ AAA is a pattern for organizing unit tests. It breaks tests down into three clea
 - **Integration tests** - test multiple functions
 - **End-to-end tests** - test the entire app
 
+### Integration testing vs Unit testing
+
+Integration testing takes into account the user flow
+
+- **User Flow** - the steps a user takes to complete a task (how a user would use an application)
+
+In integration testing, we write tests taking into account how a user would use the application. For Instance by combining multiple unit tests into one
+
+> The philosophy is this: _"Having a few integration tests is better than having a lot of unit tests"_
+>
+> Note: The two are not mutually exclusive, you generally want to use both in your application
+
 #### Libraries used
 
 - `@testing-library/jest-dom`
