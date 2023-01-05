@@ -1,6 +1,7 @@
 import Todo from './components/Todo'
 import Click from './components/Click'
 import Debug from './components/Debug'
+import UserEventType from './components/UserEventType'
 
 function App() {
   const todos = [
@@ -15,6 +16,7 @@ function App() {
       })}
       <Click />
       <Debug />
+      <UserEventType />
     </>
   )
 }

@@ -277,6 +277,14 @@ afterEach(() => {
 - `getByTitle` - gets the element by its title
 - `getByTestId` - gets the element by its test id (only recommended when other queries don't work)
 
+## AAA (Arrange, Act, Assert)
+
+AAA is a pattern for organizing unit tests. It breaks tests down into three clear and distinct steps:
+
+- **Arrange** - setup the test (render the component, assign variables, etc.)
+- **Act** - perform the action (click a button, type in an input, etc.)
+- **Assert** - check the result (check if the button is disabled, check if the input has the correct value, etc.)
+
 ## Resources
 
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
