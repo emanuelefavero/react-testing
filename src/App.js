@@ -6,6 +6,7 @@ import UserEventType from './components/UserEventType'
 import Count from './components/Count'
 import Mocking from './components/Mocking'
 import MockMyChild from './components/MockMyChild'
+import MockAFunction from './components/MockAFunction'
 
 function App() {
   const todos = [
@@ -14,6 +15,9 @@ function App() {
   ]
 
   const [name, setName] = useState('')
+
+  // A noop, short for no operation, is a function that does nothing
+  const noop = () => {}
 
   return (
     <>
@@ -26,6 +30,7 @@ function App() {
       <Count />
       <Mocking name={name} setName={setName} />
       <MockMyChild />
+      <MockAFunction functionToMock={noop} />
     </>
   )
 }
