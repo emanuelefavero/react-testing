@@ -86,6 +86,13 @@ test('fetches data', async () => {
 - jest.fn() - creates a mock function
 - jest.mock() - can be used to mock the implementation of a function
 
+### Mock a child component
+
+```js
+// mock child component
+jest.mock('./ChildComponent', () => () => <div data-testid='child-component' />)
+```
+
 > Open the following links side by side to see how mocking is used in a real application
 >
 > - [Test Example](https://github.com/TheOdinProject/theodinproject/blob/main/app/javascript/components/project-submissions/components/__tests__/submissions-list.test.jsx)
