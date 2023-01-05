@@ -124,6 +124,8 @@ test('renders todo component', () => {
 
 ## Testing methods
 
+- `debug()` - prints the HTML output of the component to the console
+
 - `getByTestId` - returns the element that has the given `data-testid` attribute (e.g. `<div data-testid='hello'></div>`)
 
 > Note: You should only use this if you can't find the element using other methods
@@ -142,9 +144,11 @@ test('renders todo component', () => {
 
 - `getByRole` - returns the element that has the given role (e.g. `<button role='submit'></button>`)
 
-> Note: You can use screen.getByRole('heading') to get an h1, h2, h3, etc. element
+> if you call getByRole('') without any arguments, it will raise an error but also return a list of all the roles in your rendered component
+> You can use screen.getByRole('heading') to get an h1, h2, h3, etc. element
 > You can use screen.getByRole('heading').textContent to get the text of the heading
 > You can use screen.getByRole('button') to get a button element
+> You can assign a name to a button using aria-label (e.g. `<button aria-label='hello'></button>`). If you don't assign a name, the button will be named after the text inside it (e.g. `<button>hello</button>`)
 
 - `getAllByTestId`, `getAllByText`, `getAllByPlaceholderText`, `getAllByAltText`, `getAllByTitle`, `getAllByDisplayValue`, `getAllByRole` - returns an array of elements that match the given query
 
@@ -175,6 +179,22 @@ test('renders todo component', () => {
 - `expect(element).toMatchSnapshot()` - checks if the given element matches the snapshot
 
 > Note: You can also use `not` to reverse the assertion (e.g. `expect(element).not.toBeInTheDocument()`)
+
+### Async Await
+
+Sometimes you need to wait for an element or a state to change before you can make an assertion.
+For example a button that is enabled on page load for a split second but then disabled immediately after. In this case you should use `async` await in your test.
+
+- await for a button to be disabled
+
+```js
+test('button is disabled', async () => {
+  render(<Todo />
+  expect(await screen.findByRole('button')).toBeDisabled()
+})
+```
+
+> Note: We used `.findByRole('button')` instead of `.getByRole('button')` because `.findByRole('button')` is async
 
 ## Testing events
 

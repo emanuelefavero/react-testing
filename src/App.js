@@ -1,5 +1,6 @@
 import Todo from './components/Todo'
 import Click from './components/Click'
+import Debug from './components/Debug'
 
 function App() {
   const todos = [
@@ -13,6 +14,7 @@ function App() {
         return <Todo key={todo.id} todo={todo} />
       })}
       <Click />
+      <Debug />
     </>
   )
 }
